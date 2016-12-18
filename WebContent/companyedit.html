@@ -1,0 +1,41 @@
+
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>新建单位</title>
+<link rel="stylesheet" type="text/css" media="all" href="css/login.css" />
+</head>
+<body onload="onload()">
+	<div id="content">
+	<form action=""><table>
+			<tr bgcolor="#99ccff">
+			<td colspan="2" id="topic"><B>新建单位</B></td>
+			</tr>
+			<tr>
+				<td >单位组织机构代码:<input type="text" id="code"></td>
+			</tr>
+			<tr>
+				<td >联系人:<input type="text" id="owner" ></td>
+			</tr>
+			<tr>
+				<td >单位名称:<input type="text" id="name" ></td>
+			</tr>			
+			<tr>
+				<td >电话:<input type="text" id="tel" ></td>
+			</tr>
+			<tr>
+				<td >地址:<input type="text" id="address" ></td>
+			</tr>
+											
+		
+			<tr >
+			    <td><input type="button" value="保存" onclick="save()"></td>
+			    <td><input type="reset" value="重置"></td>
+			</tr>
+		</table></form>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/companyedit.js"></script>
+</body>
+</html>

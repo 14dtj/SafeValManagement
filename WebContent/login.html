@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用户登录</title>
+</head>
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/user.js"></script>
+<body>
+<h1>安全阀管理系统</h1>
+	<div id="content">
+		<form action="" method="post">
+			<input type="hidden" value="login" name="flag" />
+			<table>
+				<tr>
+					<td>用户名:</td>
+					<td><input type="text" id="username" name="username" /></td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td><input type="password" id="password" name="password" /></td>
+				</tr>
+				<tr>
+					<td colspan=2><input type="button" value="登录"  onclick="loginCheck()"/></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

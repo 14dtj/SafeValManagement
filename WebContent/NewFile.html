@@ -1,0 +1,21 @@
+<html> 
+<head> 
+<meta charset="UTF-8">
+<title>我的第一个打印文档</title>         
+<OBJECT  ID="jatoolsPrinter" CLASSID="CLSID:B43D3361-D075-4BE2-87FE-057188254255"codebase="jatoolsPrinter.cab#version=5,7,0,0"></OBJECT>  
+<script> 
+function doPrint() 
+{    
+myDoc = {   documents:document,   // 要打印的div 对象在本文档中，控件将从本文档中的 id 为 'page1' 的div对象，
+                                                 // 作为首页打印id 为'page2'的作为第二页打印            
+                 copyrights:'杰创软件拥有版权  www.jatools.com'  // 版权声明,必须   
+                 };    jatoolsPrinter.printPreview(myDoc);// 直接打印，不弹出打印机设置对话框 
+  }   
+</script> 
+</head> 
+<body bgcolor="#e0e0e0">   
+<div id='page1'  style='background:#ffffff;margin:10;width:270;height:450;float:left'>发票1 金额:80</div> 
+<div id='page2' style='background:#ffffff;margin:10;width:270;height:450;float:left'>发票1 金额:100</div>   
+<input type="button" value="打印"   onClick=' doPrint()'> 
+</body> 
+</html>

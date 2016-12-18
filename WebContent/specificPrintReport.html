@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>安全阀离线校验报告</title>
+<OBJECT  ID="jatoolsPrinter" CLASSID="CLSID:B43D3361-D075-4BE2-87FE-057188254255"codebase="jatoolsPrinter.cab#version=5,7,0,0"></OBJECT>  
+<link rel="Stylesheet" type="text/css" href="css/login.css" />
+</head>
+<body>
+	<div class="panel datagrid" style="width: 100%;">
+		<div class="panel-header">
+			<div class="panel-title">安全阀离线校验报告</div>
+			<div class="panel-tool"></div>
+		</div>
+		<span id="reportNum">报告编号：</span>
+	</div>
+
+	<div class="functionarea">
+		<div id='page1' class="searchrow">
+			<table border=1 style="margin-left: -3px;">
+				<tbody>
+					<tr>
+						<td>使用单位：</td>
+						<td><span id="dw"></span>
+					</tr>
+					<tr>
+						<td>单位地址：</td>
+						<td><span id="address"></span>
+						<td>联系电话：</td>
+						<td><span id="tel"></span>
+					</tr>
+					<tr>
+						<td>设备代码：</td>
+						<td><span id="dm"></span>
+						<td>安装位置：</td>
+						<td><span id="azwz"></span>
+					</tr>
+					<tr>
+						<td>安全阀类型：</td>
+						<td><span id="lx"></span>
+						<td>安全阀编号：</td>
+						<td><span id="safeValId"></span>
+					</tr>
+					<tr>
+						<td>公称通径mm：</td>
+						<td><span id="tj"></span>
+						<td>制造单位：</td>
+						<td><span id="manufactUnit"></span>
+					</tr>
+					<tr>
+						<td>工作压力MPa：</td>
+						<td><span id="workPressure"></span>
+						<td>工作介质：</td>
+						<td><span id="workMedium"></span>
+					</tr>
+					<tr>
+						<td>要求整定压力MPa：</td>
+						<td><span id="intePressure"></span>
+						<td>执行标准：</td>
+						<td><span id="operateNorm"></span>
+					</tr>
+					<tr>
+						<td>校验方式：</td>
+						<td><span id="verifyMode"></span>
+						<td>校验介质：</td>
+						<td><span id="verifyMedium"></span>
+					</tr>
+					<tr>
+						<td>整定压力MPa：</td>
+						<td><span id="realPressure"></span>
+						<td>密封试验压力MPa：</td>
+						<td><span id="trailPressure"></span>
+					</tr>
+					<tr>
+						<td>校验结果：</td>
+						<td><span id="result"></span>
+					</tr>
+					<tr>
+						<td><textArea  id="fixStatement"></textArea>
+						</td>
+					</tr>
+					<tr>
+						<td>校验日期：</td>
+						<td><span id="verifyDate"></span>
+						<td>下次校验日期：</td>
+						<td><span id="nextVerifyDate"></span>
+					</tr>
+					<tr>
+						<td>校验人：</td>
+						<td><span id="verifyUser"></span>
+						<td>检验机构核准证号：
+							检验机构检验专用章（章）
+						</td>
+					</tr>
+					<tr>
+						<td>审批人：</td>
+						<td><span id="checkUser"></span>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<span>地址：南京市建邺区嘉陵江东街3号。</span>
+		<br>
+		<div class="searchrow">
+			<input type="button" id="btnPrint" class="normalbutton" value="打印预览" onclick="doPrint()"> 
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/specificPrintReport.js"></script>
+	<script> 
+		function doPrint() {    
+			myDoc = {   documents:document,                              
+                 copyrights:'杰创软件拥有版权  www.jatools.com'  
+                 };    
+			jatoolsPrinter.printPreview(myDoc);
+  		}   
+	</script> 
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>权限管理</title>
+</head>
+<body>
+	<div class="panel datagrid" style="width: 100%;">
+		<div class="panel-header">
+			<div class="panel-title">权限管理</div>
+			<div class="panel-tool"></div>
+		</div>
+	</div>
+	<div class="functionarea">
+		<ul>
+			<li>
+				<form id="manager" method="post" action="PowerManage">
+					<input name="role" type="text" value="管理员" readonly><br>
+					<input name="power" type="checkbox" value="user.html&company.html" />用户信息管理 
+					<input name="power" type="checkbox" value="aqf.html" />安全阀信息管理  
+					<input name="power" type="checkbox" value="powerManage.html" />权限信息管理 
+					<input name="power" type="checkbox" value="wtd.html&reportList.html&checkReportList.html" />安全阀离校报告信息管理
+					<br>
+					<button type="submit">保存</button>
+				</form>
+			</li>
+			<li>
+				<form id="checker" method="post" action="PowerManage">
+					<input name="role" type="text" value="相关审批人员" readonly><br>
+					<input name="power" type="checkbox" value="user.html&company.html" />用户信息管理 
+					<input name="power" type="checkbox" value="aqf.html" />安全阀信息管理  
+					<input name="power" type="checkbox" value="powerManage.html" />权限信息管理 
+					<input name="power" type="checkbox" value="wtd.html&reportList.html&checkReportList.html" />安全阀离校报告信息管理
+					<br>
+					<button type="submit">保存</button>
+				</form>
+			</li>
+			<li>
+				<form id="common">
+					<input name="role" type="text" value="普通员工" readonly><br>
+					<input name="power" type="checkbox" value="user.html&company.html" />用户信息管理 
+					<input name="power" type="checkbox" value="aqf.html" />安全阀信息管理  
+					<input name="power" type="checkbox" value="powerManage.html" />权限信息管理 
+					<input name="power" type="checkbox" value="wtd.html&reportList.html&checkReportList.html" />安全阀离校报告信息管理
+					<br>
+					<button type="submit">保存</button>
+				</form>
+			</li>
+			<li>
+				<form id="verifyer">
+					<input name="role" type="text" value="检验员" readonly><br>
+					<input name="power" type="checkbox" value="user.html&company.html" />用户信息管理 
+					<input name="power" type="checkbox" value="aqf.html" />安全阀信息管理  
+					<input name="power" type="checkbox" value="powerManage.html" />权限信息管理 
+					<input name="power" type="checkbox" value="wtd.html&reportList.html&checkReportList.html" />安全阀离校报告信息管理
+					<br>
+					<button type="submit">保存</button>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>打印委托单</title>
+<OBJECT  ID="jatoolsPrinter" CLASSID="CLSID:B43D3361-D075-4BE2-87FE-057188254255"codebase="jatoolsPrinter.cab#version=5,7,0,0"></OBJECT>  
+<link rel="stylesheet" type="text/css" media="all" href="css/login.css" />
+</head>
+<body>
+
+	<form action="">
+	<table>
+			<tr bgcolor="#99ccff">
+			<td colspan="2" id="topic"><B>打印委托单</B></td>
+			</tr>											
+	</table></form>		
+	<span id="reportNum">报告编号</span>
+    <table id='page1' border="1" id="aqftable" class="display" >
+    	<tr>
+	    	<td>使用单位</td>
+	    	<td><span id='unit'></span></td>
+    	</tr>
+    	<tr>
+	    	<td>单位地址</td>
+	    	<td><span id='address'></span></td>
+	    	<td>联系人</td>
+	    	<td><span id='contactPerson'></span></td>
+	    	<td>联系电话</td>
+	    	<td><span id='tel'></span></td>
+    	</tr>
+    	<tr><td>安全阀信息</td></tr>
+	     <tr id="1row">
+		     <td>序号</td>
+		     <td>型号</td>
+		     <td>公称通径(mm)</td>
+		     <td>工作介质</td>
+		     <td>工作压力(MPa)</td>
+		     <td>整定压力(MPa)</td>
+		     <td>附属设备代码</td>
+		     <td>安装位置</td>
+		     <td>检报告编号</td>
+		     <td>检验费用</td>
+	     </tr>
+	     <tbody id="checkReport">
+	     </tbody>
+	     <tr>
+	     	<td>总数(只)</td>
+	     	<td id='numCount'>100</td>	     	
+	     </tr>
+	     <tr>
+	     	<td>费用合计（元）</td>
+	     	<td id='feeCount'>100</td>	     	
+	     </tr>
+	     <tr><td>
+	     <textarea>说明：1.委托校验的安全阀整定压力由送校人确定符合设备设计和使用要求（签字确认）；
+      		2.安全阀校验自送检之日起5个工作日内完成，送检后超过2个月未领取视为放弃，由检验方自行处理；
+      		3.校验维修费用不含更换零配件材料费用。
+			地址：建邺区嘉陵江东街3号南京质监大厦5-7层（安全阀检验中心江南站：江宁区科建路318号、
+			025-84508435；江北站：天圣路150号、025-58397791；溧水：025-57229972）
+		 </textarea>
+		 </td></tr>
+		 <tr><td>
+		 <textarea>送校人（签字）：                        日期：                   电话：
+		 </textarea>
+		 </td></tr>
+	     <tbody id="aqftb">
+	     </tbody>
+    </table> 
+	<input type="button" value="打印" onclick="doPrint()">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/wtdprint.js"></script>
+	<script> 
+		function doPrint() {    
+			myDoc = {  
+					documents:document,                             
+                 	copyrights:'杰创软件拥有版权  www.jatools.com'  
+                 };    
+			jatoolsPrinter.print(myDoc);
+  		}   
+	</script> 
+</body>
+</html>

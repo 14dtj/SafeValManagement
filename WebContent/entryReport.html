@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>report entry</title>
+<link rel="Stylesheet" type="text/css" href="css/login.css" />
+</head>
+<body>
+<body>
+	<div class="panel datagrid" style="width: 100%;">
+		<div class="panel-header">
+			<div class="panel-title">安全阀离线校验记录</div>
+			<div class="panel-tool"></div>
+		</div>
+	</div>
+
+	<div class="functionarea">
+		<div class="searchrow">
+			<form method="post" action="VerifyReportServlet">
+				<table border=1 style="margin-left: -3px;">
+					<tbody>
+						<tr>
+							<td>使用单位：</td>
+							<td><input name="dw" type="text" id="dw" readonly></td>
+						</tr>
+						<tr>
+							<td>设备代码：</td>
+							<td><input name="fsdm" type="text" id="productId" readonly></td>
+							<td>要求整定压力：</td>
+							<td><input name="zdyl" type="text" id="intePressure" readonly></td>
+						</tr>
+						<tr>
+							<td>工作介质：</td>
+							<td><input name="gzjz" type="text" id="medium" readonly></td>
+							<td>安全阀型号：</td>
+							<td><input name="xh" type="text" id="typeId" readonly></td>
+						</tr>
+						<tr>
+							<td>公称通径：</td>
+							<td><input name="tj" type="text" id="tj" readonly></td>
+							<td>流道直径：</td>
+							<td><input name="ldzj" type="text" id="diameter" readonly></td>
+						</tr>
+						<tr>
+							<td>制造单位：</td>
+							<td><input name="zzdw" type="text" id="manufactUnit" readonly></td>
+							<td>安装位置：</td>
+							<td><input name="azwz" type="text" id="installLoc" readonly></td>
+						</tr>
+						<tr>
+							<td>制造许可证编号：</td>
+							<td><input name="xkbh" type="text" id="productPermitId" readonly></td>
+							<td>压力级别范围：</td>
+							<td><input name="ylfw" type="text" id="pressureRange" readonly></td>
+						</tr>
+						<tr>
+							<td>产品编号：</td>
+							<td><input name="wh" type="text" id="productWh" readonly></td>
+							<td>出厂日期：</td>
+							<td><input name="ccrq" type="text" id="productDate" readonly></td>
+						</tr>
+						<tr>
+							<td>校验方式：</td>
+							<td><input name="verifyMode" type="text" id="checkMode"></td>
+							<td>执行标准：</td>
+							<td><input name="operateNorm" type="text" id="operateNorm"></td>
+						</tr>
+						<tr>
+							<td>校验介质：</td>
+							<td><input name="checkMedium" type="text" id="checkMedium"></td>
+							<td>校验介质温度：</td>
+							<td><input name="checkMediumTemp" type="text" id="checkMediumTemp"></td>
+						</tr>
+						<tr>
+							<td>校验与检查：</td>
+							<td><input name="record" type="text" id="record"></td>
+							<td>备注</td>
+							<td><input name="remark" type="text" id="remark"></td>
+						</tr>
+						<tr>
+							<td>试验次数</td>
+							<td>第一次</td>
+							<td>第二次</td>
+							<td>第三次</td>
+						</tr>
+						<tr>
+							<td>实际整定压力</td>
+							<td><input name="firstRealPressure" type="text" id="firstRealPressure"></td>
+							<td><input name="secondRealPressure" type="text" id="secondRealPressure"></td>
+							<td><input name="thirdRealPressure" type="text" id="thirdRealPressure"></td>
+						</tr>
+						<tr>
+							<td>密封试验压力</td>
+							<td><input name="firstTrailPressure" type="text" id="firstTrailPressure"></td>
+							<td><input name="secondTrailPressure" type="text" id="secondTrailPressure"></td>
+							<td><input name="thirdTrailPressure" type="text" id="thirdTrailPressure"></td>
+						</tr>
+						<tr>
+							<td>校验结论</td>
+							<td><input name="conclusion" type="text" id="conclusion"></td>
+							<td>检验有效期</td>
+							<td><input name="validYear" type="text" id="validYear"></td>
+						</tr>
+						<tr>
+							<td>检验报告编号</td>
+							<td><input name="id" type="text" id="reportId"></td>
+							<td>意见通知书编号</td>
+							<td><input name="adviceNoticeId" type="text" id="adviceNoticeId"></td>
+						</tr>
+						<tr>
+							<td>校验日期</td>
+							<td><input name="verifyDate" type="date" id="verify"></td>
+						</tr>
+						<tr>
+							<td>校验台编号</td>
+							<td><input name="checkPlatformId" type="text" id="verifyPlatformId"></td>
+							<td>压力表编号</td>
+							<td><input name="pressureGaugeId" type="text" id="pressureGaugeId"></td>
+						</tr>
+						<tr>
+							<td>压力表精度</td>
+							<td><input name="pressureGaugeAccu" type="text" id="pressureGaugeAccu"></td>
+							<td>压力表量程</td>
+							<td><input name="pressureGaugeRange" type="text" id="pressureGaugeRange"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<button type="submit">提交审批</button>
+			</form>
+		</div>
+		<br>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/specific_report.js"></script>
+</body>
+</body>
+
+</html>

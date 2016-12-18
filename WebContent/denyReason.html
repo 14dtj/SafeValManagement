@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Deny Reason</title>
+</head>
+<body>
+请填写拒绝原因
+<br>
+<textarea id="reasonArea" rows="" cols=""></textarea>
+<br>
+<input type="button" id="btnPass" class="normalbutton" value="确定" onclick="deny()"> 
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script>
+function deny(){
+	var str = window.location.search;
+	var index = str.indexOf("=");
+	var strs= new Array(); 
+	var temp = str.substring(index + 1);
+	strs = temp.split("&");
+	var id = strs[0];
+	var checkUser = strs[1];
+	var value = $("#reasonArea").val();
+	$.ajax({
+		type : 'POST',
+		url : 'CheckReportServlet',
+		data : {
+			flag : "deny",
+			id : id,
+			reason:value,
+			checkUser:checkUser
+		},
+		error : function(xhr, err) {
+			alert('Error：' + err + '！')
+		},
+		success : function(data) {
+			window.location = "checkReportList.html";
+		}
+	});
+}
+</script>
+</body>
+</html>
